@@ -1,9 +1,10 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="inspire" dark>
     <v-navigation-drawer
             v-model="drawer"
             app
             clipped
+            dark
     >
       <v-list dense>
         <v-list-item link>
@@ -28,19 +29,23 @@
     <v-app-bar
             app
             clipped-left
+            dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Match View</v-toolbar-title>
     </v-app-bar>
 
-    <v-main>
+    <v-main
+    dark>
 
       <v-container
               class="fill-height"
               fluid
+              dark
 
       >
-        <v-data-table><datatable></datatable></v-data-table>
+        <datatable
+        ></datatable>
       </v-container>
     </v-main>
 
@@ -51,7 +56,7 @@
 </template>
 
 <script>
-import datatable from './components/datatable'
+import datatable from './components/DataTable'
   export default {
 
   components:
